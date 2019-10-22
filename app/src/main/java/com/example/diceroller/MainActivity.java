@@ -64,18 +64,10 @@ public class MainActivity extends AppCompatActivity {
     public void clickTheButton(View view){
 
         dice = this.findViewById(R.id.textView);
-        point = this.findViewById(R.id.userPoints);
 
         Random rand = new Random();
         int number = rand.nextInt(6)+1;
         dice.setText(Integer.toString(number));
-        InputNumber = (EditText) this.findViewById(R.id.roll);
-        String num = InputNumber.getText().toString();
-        if(num.equals(Integer.toString(number))&&Integer.parseInt(num) < 7) {
-            dice.setText("Congratulations: " + number);
-            count++;
-            point.setText("User Ponits: " + count);
-        }
     }
 }
 
