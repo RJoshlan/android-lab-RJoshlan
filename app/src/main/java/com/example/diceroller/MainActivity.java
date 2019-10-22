@@ -20,6 +20,8 @@ public class MainActivity extends AppCompatActivity {
 
     TextView dice;
     EditText InputNumber;
+    TextView point;
+    int count = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,7 +62,9 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
     public void clickTheButton(View view){
+
         dice = this.findViewById(R.id.textView);
+        point = this.findViewById(R.id.userPoints);
 
         Random rand = new Random();
         int number = rand.nextInt(6)+1;
@@ -69,6 +73,8 @@ public class MainActivity extends AppCompatActivity {
         String num = InputNumber.getText().toString();
         if(num.equals(Integer.toString(number))&&Integer.parseInt(num) < 7) {
             dice.setText("Congratulations: " + number);
+            count++;
+            point.setText("User Ponits: " + count);
         }
     }
 }
