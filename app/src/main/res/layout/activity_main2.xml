@@ -65,13 +65,4 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.328" />
 
-    <Button
-        android:id="@+id/button6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="addingToArray"
-        android:text="Add New Rule"
-        tools:layout_editor_absoluteX="157dp"
-        tools:layout_editor_absoluteY="327dp" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

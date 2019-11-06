@@ -24,18 +24,19 @@ public class Main2Activity extends AppCompatActivity {
     }
 // Part 3a
 
-    public void addingToArray(View view){
+
+    public void addingToArray(){
         TextView tv = this.findViewById(R.id.textView2);
         EditText inputRule = this.findViewById(R.id.newRule);
         ArrayList<String> questions1 = new ArrayList<String>();
         String s = inputRule.getText().toString();
         questions1.add(s);
         tv.setText(s);
-
     }
 
     public void bkScreenSave(View view){
         intent2 = new Intent(this,MainActivity.class);
+        addingToArray();
         startActivity(intent2);
     }
 
